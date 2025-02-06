@@ -1,0 +1,3720 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "version": "1.0.0"
+  },
+  "servers": [
+    {}
+  ],
+  "tags": [
+    {
+      "name": "Auth",
+      "description": "Operaciones de autenticación"
+    },
+    {
+      "name": "Usuarios",
+      "description": "Descripción del otro controlador"
+    }
+  ],
+  "components": {
+    "schemas": {
+      "Ciudad": {
+        "request": {
+          "type": "object",
+          "properties": {
+            "descripcion": {
+              "type": "string",
+              "description": "Descripción de descripcion"
+            },
+            "estaActivo": {
+              "type": "boolean",
+              "description": "Descripción de estaActivo"
+            }
+          },
+          "required": [
+            "descripcion",
+            "estaActivo"
+          ]
+        },
+        "response": {
+          "type": "object",
+          "properties": {
+            "secuencial": {
+              "type": "integer",
+              "description": "Descripción de secuencial"
+            },
+            "descripcion": {
+              "type": "string",
+              "description": "Descripción de descripcion"
+            },
+            "estaActivo": {
+              "type": "boolean",
+              "description": "Descripción de estaActivo"
+            },
+            "createdAt": {
+              "type": "date",
+              "description": "Descripción de createdAt"
+            },
+            "updatedAt": {
+              "type": "date",
+              "description": "Descripción de updatedAt"
+            }
+          },
+          "required": [
+            "secuencial",
+            "descripcion",
+            "estaActivo",
+            "createdAt",
+            "updatedAt"
+          ]
+        }
+      },
+      "EducacionUsuario": {
+        "request": {
+          "type": "object",
+          "properties": {
+            "titulo": {
+              "type": "string",
+              "description": "Descripción de titulo"
+            },
+            "institucion": {
+              "type": "string",
+              "description": "Descripción de institucion"
+            },
+            "fecha_inicio": {
+              "type": "string",
+              "description": "Descripción de fecha_inicio"
+            },
+            "fecha_fin": {
+              "type": "string",
+              "description": "Descripción de fecha_fin"
+            },
+            "presente": {
+              "type": "boolean",
+              "description": "Descripción de presente"
+            },
+            "estaActivo": {
+              "type": "boolean",
+              "description": "Descripción de estaActivo"
+            },
+            "EducacionUserSecuencial": {
+              "type": "integer",
+              "description": "Descripción de EducacionUserSecuencial"
+            }
+          },
+          "required": [
+            "titulo",
+            "institucion",
+            "fecha_inicio",
+            "fecha_fin",
+            "presente",
+            "estaActivo"
+          ]
+        },
+        "response": {
+          "type": "object",
+          "properties": {
+            "secuencial": {
+              "type": "integer",
+              "description": "Descripción de secuencial"
+            },
+            "titulo": {
+              "type": "string",
+              "description": "Descripción de titulo"
+            },
+            "institucion": {
+              "type": "string",
+              "description": "Descripción de institucion"
+            },
+            "fecha_inicio": {
+              "type": "string",
+              "description": "Descripción de fecha_inicio"
+            },
+            "fecha_fin": {
+              "type": "string",
+              "description": "Descripción de fecha_fin"
+            },
+            "presente": {
+              "type": "boolean",
+              "description": "Descripción de presente"
+            },
+            "estaActivo": {
+              "type": "boolean",
+              "description": "Descripción de estaActivo"
+            },
+            "createdAt": {
+              "type": "date",
+              "description": "Descripción de createdAt"
+            },
+            "updatedAt": {
+              "type": "date",
+              "description": "Descripción de updatedAt"
+            },
+            "EducacionUserSecuencial": {
+              "type": "integer",
+              "description": "Descripción de EducacionUserSecuencial"
+            }
+          },
+          "required": [
+            "secuencial",
+            "titulo",
+            "institucion",
+            "fecha_inicio",
+            "fecha_fin",
+            "presente",
+            "estaActivo",
+            "createdAt",
+            "updatedAt"
+          ]
+        },
+        "type": "object",
+        "properties": {
+          "secuencial": {
+            "type": "integer"
+          },
+          "titulo": {
+            "type": "string"
+          },
+          "institucion": {
+            "type": "string"
+          },
+          "fecha_inicio": {
+            "type": "string",
+            "format": "date"
+          },
+          "fecha_fin": {
+            "type": "string",
+            "format": "date"
+          },
+          "presente": {
+            "type": "boolean"
+          },
+          "estaActivo": {
+            "type": "boolean"
+          },
+          "EducacionUserSecuencial": {
+            "type": "integer"
+          }
+        }
+      },
+      "Experiencia": {
+        "request": {
+          "type": "object",
+          "properties": {
+            "cargo": {
+              "type": "string",
+              "description": "Descripción de cargo"
+            },
+            "empresa": {
+              "type": "string",
+              "description": "Descripción de empresa"
+            },
+            "fecha_inicio": {
+              "type": "string",
+              "description": "Descripción de fecha_inicio"
+            },
+            "fecha_fin": {
+              "type": "string",
+              "description": "Descripción de fecha_fin"
+            },
+            "presente": {
+              "type": "boolean",
+              "description": "Descripción de presente"
+            },
+            "estaActivo": {
+              "type": "boolean",
+              "description": "Descripción de estaActivo"
+            },
+            "ExperienciaUserSecuencial": {
+              "type": "integer",
+              "description": "Descripción de ExperienciaUserSecuencial"
+            }
+          },
+          "required": [
+            "cargo",
+            "empresa",
+            "fecha_inicio",
+            "fecha_fin",
+            "presente",
+            "estaActivo"
+          ]
+        },
+        "response": {
+          "type": "object",
+          "properties": {
+            "secuencial": {
+              "type": "integer",
+              "description": "Descripción de secuencial"
+            },
+            "cargo": {
+              "type": "string",
+              "description": "Descripción de cargo"
+            },
+            "empresa": {
+              "type": "string",
+              "description": "Descripción de empresa"
+            },
+            "fecha_inicio": {
+              "type": "string",
+              "description": "Descripción de fecha_inicio"
+            },
+            "fecha_fin": {
+              "type": "string",
+              "description": "Descripción de fecha_fin"
+            },
+            "presente": {
+              "type": "boolean",
+              "description": "Descripción de presente"
+            },
+            "estaActivo": {
+              "type": "boolean",
+              "description": "Descripción de estaActivo"
+            },
+            "createdAt": {
+              "type": "date",
+              "description": "Descripción de createdAt"
+            },
+            "updatedAt": {
+              "type": "date",
+              "description": "Descripción de updatedAt"
+            },
+            "ExperienciaUserSecuencial": {
+              "type": "integer",
+              "description": "Descripción de ExperienciaUserSecuencial"
+            }
+          },
+          "required": [
+            "secuencial",
+            "cargo",
+            "empresa",
+            "fecha_inicio",
+            "fecha_fin",
+            "presente",
+            "estaActivo",
+            "createdAt",
+            "updatedAt"
+          ]
+        },
+        "type": "object",
+        "properties": {
+          "secuencial": {
+            "type": "integer"
+          },
+          "cargo": {
+            "type": "string"
+          },
+          "empresa": {
+            "type": "string"
+          },
+          "fecha_inicio": {
+            "type": "string",
+            "format": "date"
+          },
+          "fecha_fin": {
+            "type": "string",
+            "format": "date"
+          },
+          "presente": {
+            "type": "boolean"
+          },
+          "estaActivo": {
+            "type": "boolean"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "ExperienciaUserSecuencial": {
+            "type": "integer"
+          }
+        }
+      },
+      "Opcion": {
+        "request": {
+          "type": "object",
+          "properties": {
+            "descripcion": {
+              "type": "string",
+              "description": "Descripción de descripcion"
+            },
+            "estaActivo": {
+              "type": "boolean",
+              "description": "Descripción de estaActivo"
+            },
+            "preguntaSecuencial": {
+              "type": "integer",
+              "description": "Descripción de preguntaSecuencial"
+            }
+          },
+          "required": [
+            "descripcion",
+            "estaActivo"
+          ]
+        },
+        "response": {
+          "type": "object",
+          "properties": {
+            "secuencial": {
+              "type": "integer",
+              "description": "Descripción de secuencial"
+            },
+            "descripcion": {
+              "type": "string",
+              "description": "Descripción de descripcion"
+            },
+            "estaActivo": {
+              "type": "boolean",
+              "description": "Descripción de estaActivo"
+            },
+            "createdAt": {
+              "type": "date",
+              "description": "Descripción de createdAt"
+            },
+            "updatedAt": {
+              "type": "date",
+              "description": "Descripción de updatedAt"
+            },
+            "preguntaSecuencial": {
+              "type": "integer",
+              "description": "Descripción de preguntaSecuencial"
+            }
+          },
+          "required": [
+            "secuencial",
+            "descripcion",
+            "estaActivo",
+            "createdAt",
+            "updatedAt"
+          ]
+        }
+      },
+      "Pais": {
+        "request": {
+          "type": "object",
+          "properties": {
+            "descripcion": {
+              "type": "string",
+              "description": "Descripción de descripcion"
+            },
+            "estaActivo": {
+              "type": "boolean",
+              "description": "Descripción de estaActivo"
+            },
+            "ciudadSecuencial": {
+              "type": "integer",
+              "description": "Descripción de ciudadSecuencial"
+            }
+          },
+          "required": [
+            "descripcion",
+            "estaActivo"
+          ]
+        },
+        "response": {
+          "type": "object",
+          "properties": {
+            "secuencial": {
+              "type": "integer",
+              "description": "Descripción de secuencial"
+            },
+            "descripcion": {
+              "type": "string",
+              "description": "Descripción de descripcion"
+            },
+            "estaActivo": {
+              "type": "boolean",
+              "description": "Descripción de estaActivo"
+            },
+            "createdAt": {
+              "type": "date",
+              "description": "Descripción de createdAt"
+            },
+            "updatedAt": {
+              "type": "date",
+              "description": "Descripción de updatedAt"
+            },
+            "ciudadSecuencial": {
+              "type": "integer",
+              "description": "Descripción de ciudadSecuencial"
+            }
+          },
+          "required": [
+            "secuencial",
+            "descripcion",
+            "estaActivo",
+            "createdAt",
+            "updatedAt"
+          ]
+        }
+      },
+      "Pregunta": {
+        "request": {
+          "type": "object",
+          "properties": {
+            "descripcion": {
+              "type": "string",
+              "description": "Descripción de descripcion"
+            },
+            "textoPregunta": {
+              "type": "string",
+              "description": "Descripción de textoPregunta"
+            },
+            "estaActivo": {
+              "type": "boolean",
+              "description": "Descripción de estaActivo"
+            }
+          },
+          "required": [
+            "descripcion",
+            "estaActivo"
+          ]
+        },
+        "response": {
+          "type": "object",
+          "properties": {
+            "secuencial": {
+              "type": "integer",
+              "description": "Descripción de secuencial"
+            },
+            "descripcion": {
+              "type": "string",
+              "description": "Descripción de descripcion"
+            },
+            "textoPregunta": {
+              "type": "string",
+              "description": "Descripción de textoPregunta"
+            },
+            "estaActivo": {
+              "type": "boolean",
+              "description": "Descripción de estaActivo"
+            },
+            "createdAt": {
+              "type": "date",
+              "description": "Descripción de createdAt"
+            },
+            "updatedAt": {
+              "type": "date",
+              "description": "Descripción de updatedAt"
+            }
+          },
+          "required": [
+            "secuencial",
+            "descripcion",
+            "estaActivo",
+            "createdAt",
+            "updatedAt"
+          ]
+        }
+      },
+      "Publicidad": {
+        "request": {
+          "type": "object",
+          "properties": {
+            "titulo": {
+              "type": "string",
+              "description": "Descripción de titulo"
+            },
+            "descripcion": {
+              "type": "string",
+              "description": "Descripción de descripcion"
+            },
+            "text": {
+              "type": "text",
+              "description": "Descripción de text"
+            },
+            "image": {
+              "type": "string",
+              "description": "Descripción de image"
+            },
+            "fecha_inicio": {
+              "type": "string",
+              "description": "Descripción de fecha_inicio"
+            },
+            "fecha_fin": {
+              "type": "string",
+              "description": "Descripción de fecha_fin"
+            },
+            "estaActivo": {
+              "type": "boolean",
+              "description": "Descripción de estaActivo"
+            },
+            "PublicidadUserSecuencial": {
+              "type": "integer",
+              "description": "Descripción de PublicidadUserSecuencial"
+            }
+          },
+          "required": [
+            "titulo",
+            "descripcion",
+            "text",
+            "image",
+            "fecha_inicio",
+            "fecha_fin",
+            "estaActivo"
+          ]
+        },
+        "response": {
+          "type": "object",
+          "properties": {
+            "secuencial": {
+              "type": "integer",
+              "description": "Descripción de secuencial"
+            },
+            "titulo": {
+              "type": "string",
+              "description": "Descripción de titulo"
+            },
+            "descripcion": {
+              "type": "string",
+              "description": "Descripción de descripcion"
+            },
+            "text": {
+              "type": "text",
+              "description": "Descripción de text"
+            },
+            "image": {
+              "type": "string",
+              "description": "Descripción de image"
+            },
+            "fecha_inicio": {
+              "type": "string",
+              "description": "Descripción de fecha_inicio"
+            },
+            "fecha_fin": {
+              "type": "string",
+              "description": "Descripción de fecha_fin"
+            },
+            "estaActivo": {
+              "type": "boolean",
+              "description": "Descripción de estaActivo"
+            },
+            "createdAt": {
+              "type": "date",
+              "description": "Descripción de createdAt"
+            },
+            "updatedAt": {
+              "type": "date",
+              "description": "Descripción de updatedAt"
+            },
+            "PublicidadUserSecuencial": {
+              "type": "integer",
+              "description": "Descripción de PublicidadUserSecuencial"
+            }
+          },
+          "required": [
+            "secuencial",
+            "titulo",
+            "descripcion",
+            "text",
+            "image",
+            "fecha_inicio",
+            "fecha_fin",
+            "estaActivo",
+            "createdAt",
+            "updatedAt"
+          ]
+        }
+      },
+      "RedSocial": {
+        "request": {
+          "type": "object",
+          "properties": {
+            "descripcion": {
+              "type": "string",
+              "description": "Descripción de descripcion"
+            },
+            "estaActivo": {
+              "type": "boolean",
+              "description": "Descripción de estaActivo"
+            }
+          },
+          "required": [
+            "descripcion",
+            "estaActivo"
+          ]
+        },
+        "response": {
+          "type": "object",
+          "properties": {
+            "secuencial": {
+              "type": "integer",
+              "description": "Descripción de secuencial"
+            },
+            "descripcion": {
+              "type": "string",
+              "description": "Descripción de descripcion"
+            },
+            "estaActivo": {
+              "type": "boolean",
+              "description": "Descripción de estaActivo"
+            },
+            "createdAt": {
+              "type": "date",
+              "description": "Descripción de createdAt"
+            },
+            "updatedAt": {
+              "type": "date",
+              "description": "Descripción de updatedAt"
+            }
+          },
+          "required": [
+            "secuencial",
+            "descripcion",
+            "estaActivo",
+            "createdAt",
+            "updatedAt"
+          ]
+        }
+      },
+      "TipoUsuario": {
+        "request": {
+          "type": "object",
+          "properties": {
+            "descripcion": {
+              "type": "string",
+              "description": "Descripción de descripcion"
+            },
+            "estaActivo": {
+              "type": "boolean",
+              "description": "Descripción de estaActivo"
+            }
+          },
+          "required": [
+            "descripcion",
+            "estaActivo"
+          ]
+        },
+        "response": {
+          "type": "object",
+          "properties": {
+            "secuencial": {
+              "type": "integer",
+              "description": "Descripción de secuencial"
+            },
+            "descripcion": {
+              "type": "string",
+              "description": "Descripción de descripcion"
+            },
+            "estaActivo": {
+              "type": "boolean",
+              "description": "Descripción de estaActivo"
+            },
+            "createdAt": {
+              "type": "date",
+              "description": "Descripción de createdAt"
+            },
+            "updatedAt": {
+              "type": "date",
+              "description": "Descripción de updatedAt"
+            }
+          },
+          "required": [
+            "secuencial",
+            "descripcion",
+            "estaActivo",
+            "createdAt",
+            "updatedAt"
+          ]
+        }
+      },
+      "Titulo": {
+        "request": {
+          "type": "object",
+          "properties": {
+            "descripcion": {
+              "type": "string",
+              "description": "Descripción de descripcion"
+            },
+            "codigoRegistroSenescyt": {
+              "type": "string",
+              "description": "Descripción de codigoRegistroSenescyt"
+            },
+            "nombreUniversidad": {
+              "type": "string",
+              "description": "Descripción de nombreUniversidad"
+            },
+            "estaActivo": {
+              "type": "boolean",
+              "description": "Descripción de estaActivo"
+            }
+          },
+          "required": [
+            "descripcion",
+            "codigoRegistroSenescyt",
+            "nombreUniversidad",
+            "estaActivo"
+          ]
+        },
+        "response": {
+          "type": "object",
+          "properties": {
+            "secuencial": {
+              "type": "integer",
+              "description": "Descripción de secuencial"
+            },
+            "descripcion": {
+              "type": "string",
+              "description": "Descripción de descripcion"
+            },
+            "codigoRegistroSenescyt": {
+              "type": "string",
+              "description": "Descripción de codigoRegistroSenescyt"
+            },
+            "nombreUniversidad": {
+              "type": "string",
+              "description": "Descripción de nombreUniversidad"
+            },
+            "estaActivo": {
+              "type": "boolean",
+              "description": "Descripción de estaActivo"
+            },
+            "createdAt": {
+              "type": "date",
+              "description": "Descripción de createdAt"
+            },
+            "updatedAt": {
+              "type": "date",
+              "description": "Descripción de updatedAt"
+            }
+          },
+          "required": [
+            "secuencial",
+            "descripcion",
+            "codigoRegistroSenescyt",
+            "nombreUniversidad",
+            "estaActivo",
+            "createdAt",
+            "updatedAt"
+          ]
+        }
+      },
+      "User": {
+        "request": {
+          "type": "object",
+          "properties": {
+            "username": {
+              "type": "string",
+              "description": "Descripción de username"
+            },
+            "email": {
+              "type": "string",
+              "description": "Descripción de email"
+            },
+            "code": {
+              "type": "string",
+              "description": "Descripción de code"
+            },
+            "nombres": {
+              "type": "string",
+              "description": "Descripción de nombres"
+            },
+            "apellidos": {
+              "type": "string",
+              "description": "Descripción de apellidos"
+            },
+            "cedula": {
+              "type": "string",
+              "description": "Descripción de cedula"
+            },
+            "numeroLicencia": {
+              "type": "string",
+              "description": "Descripción de numeroLicencia"
+            },
+            "direccion": {
+              "type": "string",
+              "description": "Descripción de direccion"
+            },
+            "movil": {
+              "type": "string",
+              "description": "Descripción de movil"
+            },
+            "titulo_principal": {
+              "type": "string",
+              "description": "Descripción de titulo_principal"
+            },
+            "password": {
+              "type": "string",
+              "description": "Descripción de password"
+            },
+            "avatar": {
+              "type": "string",
+              "description": "Descripción de avatar"
+            },
+            "fotoPortada": {
+              "type": "string",
+              "description": "Descripción de fotoPortada"
+            },
+            "coordenadaX": {
+              "type": "float",
+              "description": "Descripción de coordenadaX"
+            },
+            "coordenadaY": {
+              "type": "float",
+              "description": "Descripción de coordenadaY"
+            },
+            "atributoLibreUno": {
+              "type": "string",
+              "description": "Descripción de atributoLibreUno"
+            },
+            "atributoLibreDos": {
+              "type": "string",
+              "description": "Descripción de atributoLibreDos"
+            },
+            "atributoLibreTres": {
+              "type": "string",
+              "description": "Descripción de atributoLibreTres"
+            },
+            "perfilProfesional": {
+              "type": "string",
+              "description": "Descripción de perfilProfesional"
+            },
+            "estaActivo": {
+              "type": "boolean",
+              "description": "Descripción de estaActivo"
+            },
+            "estadoCuenta": {
+              "type": "boolean",
+              "description": "Descripción de estadoCuenta"
+            },
+            "acerca": {
+              "type": "text",
+              "description": "Descripción de acerca"
+            },
+            "tipoUsuarioSecuencial": {
+              "type": "integer",
+              "description": "Descripción de tipoUsuarioSecuencial"
+            },
+            "PaisSecuencial": {
+              "type": "integer",
+              "description": "Descripción de PaisSecuencial"
+            }
+          },
+          "required": [
+            "username",
+            "email",
+            "code",
+            "nombres",
+            "apellidos",
+            "cedula",
+            "numeroLicencia",
+            "direccion",
+            "movil",
+            "titulo_principal",
+            "password",
+            "avatar",
+            "fotoPortada",
+            "coordenadaX",
+            "coordenadaY",
+            "atributoLibreUno",
+            "atributoLibreDos",
+            "atributoLibreTres",
+            "perfilProfesional",
+            "estaActivo",
+            "estadoCuenta",
+            "acerca"
+          ]
+        },
+        "response": {
+          "type": "object",
+          "properties": {
+            "secuencial": {
+              "type": "integer",
+              "description": "Descripción de secuencial"
+            },
+            "username": {
+              "type": "string",
+              "description": "Descripción de username"
+            },
+            "email": {
+              "type": "string",
+              "description": "Descripción de email"
+            },
+            "code": {
+              "type": "string",
+              "description": "Descripción de code"
+            },
+            "nombres": {
+              "type": "string",
+              "description": "Descripción de nombres"
+            },
+            "apellidos": {
+              "type": "string",
+              "description": "Descripción de apellidos"
+            },
+            "cedula": {
+              "type": "string",
+              "description": "Descripción de cedula"
+            },
+            "numeroLicencia": {
+              "type": "string",
+              "description": "Descripción de numeroLicencia"
+            },
+            "direccion": {
+              "type": "string",
+              "description": "Descripción de direccion"
+            },
+            "movil": {
+              "type": "string",
+              "description": "Descripción de movil"
+            },
+            "titulo_principal": {
+              "type": "string",
+              "description": "Descripción de titulo_principal"
+            },
+            "password": {
+              "type": "string",
+              "description": "Descripción de password"
+            },
+            "avatar": {
+              "type": "string",
+              "description": "Descripción de avatar"
+            },
+            "fotoPortada": {
+              "type": "string",
+              "description": "Descripción de fotoPortada"
+            },
+            "coordenadaX": {
+              "type": "float",
+              "description": "Descripción de coordenadaX"
+            },
+            "coordenadaY": {
+              "type": "float",
+              "description": "Descripción de coordenadaY"
+            },
+            "atributoLibreUno": {
+              "type": "string",
+              "description": "Descripción de atributoLibreUno"
+            },
+            "atributoLibreDos": {
+              "type": "string",
+              "description": "Descripción de atributoLibreDos"
+            },
+            "atributoLibreTres": {
+              "type": "string",
+              "description": "Descripción de atributoLibreTres"
+            },
+            "perfilProfesional": {
+              "type": "string",
+              "description": "Descripción de perfilProfesional"
+            },
+            "estaActivo": {
+              "type": "boolean",
+              "description": "Descripción de estaActivo"
+            },
+            "estadoCuenta": {
+              "type": "boolean",
+              "description": "Descripción de estadoCuenta"
+            },
+            "acerca": {
+              "type": "text",
+              "description": "Descripción de acerca"
+            },
+            "createdAt": {
+              "type": "date",
+              "description": "Descripción de createdAt"
+            },
+            "updatedAt": {
+              "type": "date",
+              "description": "Descripción de updatedAt"
+            },
+            "tipoUsuarioSecuencial": {
+              "type": "integer",
+              "description": "Descripción de tipoUsuarioSecuencial"
+            },
+            "PaisSecuencial": {
+              "type": "integer",
+              "description": "Descripción de PaisSecuencial"
+            }
+          },
+          "required": [
+            "secuencial",
+            "username",
+            "email",
+            "code",
+            "nombres",
+            "apellidos",
+            "cedula",
+            "numeroLicencia",
+            "direccion",
+            "movil",
+            "titulo_principal",
+            "password",
+            "avatar",
+            "fotoPortada",
+            "coordenadaX",
+            "coordenadaY",
+            "atributoLibreUno",
+            "atributoLibreDos",
+            "atributoLibreTres",
+            "perfilProfesional",
+            "estaActivo",
+            "estadoCuenta",
+            "acerca",
+            "createdAt",
+            "updatedAt"
+          ]
+        }
+      },
+      "UserPregunta": {
+        "request": {
+          "type": "object",
+          "properties": {
+            "textoPregunta": {
+              "type": "string",
+              "description": "Descripción de textoPregunta"
+            },
+            "textoRespuesta": {
+              "type": "string",
+              "description": "Descripción de textoRespuesta"
+            },
+            "estaActivo": {
+              "type": "boolean",
+              "description": "Descripción de estaActivo"
+            },
+            "userSecuencial": {
+              "type": "integer",
+              "description": "Descripción de userSecuencial"
+            },
+            "preguntaSecuencial": {
+              "type": "integer",
+              "description": "Descripción de preguntaSecuencial"
+            }
+          },
+          "required": [
+            "textoPregunta",
+            "textoRespuesta",
+            "estaActivo"
+          ]
+        },
+        "response": {
+          "type": "object",
+          "properties": {
+            "secuencial": {
+              "type": "integer",
+              "description": "Descripción de secuencial"
+            },
+            "textoPregunta": {
+              "type": "string",
+              "description": "Descripción de textoPregunta"
+            },
+            "textoRespuesta": {
+              "type": "string",
+              "description": "Descripción de textoRespuesta"
+            },
+            "estaActivo": {
+              "type": "boolean",
+              "description": "Descripción de estaActivo"
+            },
+            "createdAt": {
+              "type": "date",
+              "description": "Descripción de createdAt"
+            },
+            "updatedAt": {
+              "type": "date",
+              "description": "Descripción de updatedAt"
+            },
+            "userSecuencial": {
+              "type": "integer",
+              "description": "Descripción de userSecuencial"
+            },
+            "preguntaSecuencial": {
+              "type": "integer",
+              "description": "Descripción de preguntaSecuencial"
+            }
+          },
+          "required": [
+            "secuencial",
+            "textoPregunta",
+            "textoRespuesta",
+            "estaActivo",
+            "createdAt",
+            "updatedAt"
+          ]
+        }
+      },
+      "UserRedSocial": {
+        "request": {
+          "type": "object",
+          "properties": {
+            "descripcion": {
+              "type": "string",
+              "description": "Descripción de descripcion"
+            },
+            "estaActivo": {
+              "type": "boolean",
+              "description": "Descripción de estaActivo"
+            },
+            "UserSecuencial": {
+              "type": "integer",
+              "description": "Descripción de UserSecuencial"
+            },
+            "RedSocialSecuencial": {
+              "type": "integer",
+              "description": "Descripción de RedSocialSecuencial"
+            }
+          },
+          "required": [
+            "descripcion",
+            "estaActivo"
+          ]
+        },
+        "response": {
+          "type": "object",
+          "properties": {
+            "secuencial": {
+              "type": "integer",
+              "description": "Descripción de secuencial"
+            },
+            "descripcion": {
+              "type": "string",
+              "description": "Descripción de descripcion"
+            },
+            "estaActivo": {
+              "type": "boolean",
+              "description": "Descripción de estaActivo"
+            },
+            "createdAt": {
+              "type": "date",
+              "description": "Descripción de createdAt"
+            },
+            "updatedAt": {
+              "type": "date",
+              "description": "Descripción de updatedAt"
+            },
+            "UserSecuencial": {
+              "type": "integer",
+              "description": "Descripción de UserSecuencial"
+            },
+            "RedSocialSecuencial": {
+              "type": "integer",
+              "description": "Descripción de RedSocialSecuencial"
+            }
+          },
+          "required": [
+            "secuencial",
+            "descripcion",
+            "estaActivo",
+            "createdAt",
+            "updatedAt"
+          ]
+        }
+      },
+      "UserTitulo": {
+        "request": {
+          "type": "object",
+          "properties": {
+            "estaActivo": {
+              "type": "boolean",
+              "description": "Descripción de estaActivo"
+            },
+            "UserSecuencial": {
+              "type": "integer",
+              "description": "Descripción de UserSecuencial"
+            },
+            "TituloSecuencial": {
+              "type": "integer",
+              "description": "Descripción de TituloSecuencial"
+            }
+          },
+          "required": [
+            "estaActivo"
+          ]
+        },
+        "response": {
+          "type": "object",
+          "properties": {
+            "secuencial": {
+              "type": "integer",
+              "description": "Descripción de secuencial"
+            },
+            "estaActivo": {
+              "type": "boolean",
+              "description": "Descripción de estaActivo"
+            },
+            "createdAt": {
+              "type": "date",
+              "description": "Descripción de createdAt"
+            },
+            "updatedAt": {
+              "type": "date",
+              "description": "Descripción de updatedAt"
+            },
+            "UserSecuencial": {
+              "type": "integer",
+              "description": "Descripción de UserSecuencial"
+            },
+            "TituloSecuencial": {
+              "type": "integer",
+              "description": "Descripción de TituloSecuencial"
+            }
+          },
+          "required": [
+            "secuencial",
+            "estaActivo",
+            "createdAt",
+            "updatedAt"
+          ]
+        }
+      },
+      "EducacionUsuarioRequest": {
+        "type": "object",
+        "properties": {
+          "titulo": {
+            "type": "string",
+            "maxLength": 150
+          },
+          "institucion": {
+            "type": "string",
+            "maxLength": 100
+          },
+          "fecha_inicio": {
+            "type": "string",
+            "format": "date"
+          },
+          "fecha_fin": {
+            "type": "string",
+            "format": "date"
+          },
+          "presente": {
+            "type": "boolean"
+          },
+          "estaActivo": {
+            "type": "boolean"
+          },
+          "EducacionUserSecuencial": {
+            "type": "integer"
+          }
+        }
+      },
+      "EducacionUsuarioResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "data": {
+            "type": "object",
+            "$ref": "#/components/schemas/EducacionUsuario"
+          },
+          "httpStatus": {
+            "type": "integer"
+          },
+          "message": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "requestBodies": {
+      "ExperienciaRequest": {
+        "description": "Datos de Experiencia a crear o actualizar.",
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Experiencia"
+            }
+          }
+        },
+        "example": {
+          "cargo": "Tecnico Laboratorista",
+          "empresa": "Universidad Catolica De Cuenca",
+          "fecha_inicio": "2023-11-15",
+          "fecha_fin": "",
+          "presente": true,
+          "estaActivo": true,
+          "ExperienciaUserSecuencial": 2
+        }
+      },
+      "ExperienciaResponse": {
+        "description": "Respuesta de Experiencia.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Experiencia"
+            }
+          }
+        },
+        "example": {
+          "secuencial": 1,
+          "cargo": "Tecnico Laboratorista",
+          "empresa": "Universidad Catolica De Cuenca",
+          "fecha_inicio": "2023-11-15",
+          "fecha_fin": "",
+          "presente": true,
+          "estaActivo": true,
+          "createdAt": "2023-11-15T05:03:07.796Z",
+          "updatedAt": "2023-11-15T05:03:07.796Z",
+          "ExperienciaUserSecuencial": 2
+        }
+      }
+    }
+  },
+  "paths": {
+    "/rest/auth": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "summary": "Autenticación de usuario",
+        "description": "Permite a los usuarios autenticarse.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "username": {
+                    "type": "string",
+                    "description": "Nombre de usuario"
+                  },
+                  "password": {
+                    "type": "string",
+                    "description": "Contraseña"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Autenticación exitosa"
+          },
+          "401": {
+            "description": "No autorizado"
+          }
+        }
+      }
+    },
+    "/rest/ciudad": {
+      "post": {
+        "summary": "Crea un nuevo ciudad.",
+        "tags": [
+          "Ciudad"
+        ],
+        "requestBody": {
+          "description": "Datos del ciudad a crear.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Ciudad/request"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Ciudad creado exitosamente.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Ciudad/response"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error del servidor al crear ciudad."
+          }
+        }
+      }
+    },
+    "/rest/ciudades": {
+      "get": {
+        "summary": "Obtiene un listado de ciudades.",
+        "tags": [
+          "Ciudad"
+        ],
+        "responses": {
+          "200": {
+            "description": "Listado de ciudades obtenido exitosamente.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ciudad/response"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error del servidor al obtener el listado de ciudades."
+          }
+        }
+      }
+    },
+    "/rest/ciudad/{id}": {
+      "get": {
+        "summary": "Obtiene un tipo de ciudad por ID.",
+        "tags": [
+          "Ciudad"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "ID del tipo de ciudad a buscar.",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "ciudad encontrado.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ciudad/response"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "ciudad no encontrado."
+          },
+          "500": {
+            "description": "Error del servidor al obtener ciudad."
+          }
+        }
+      },
+      "put": {
+        "summary": "Actualiza un ciudad por ID.",
+        "tags": [
+          "Ciudad"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "ID del ciudad a actualizar.",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Nuevos datos del ciudad.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ciudad/request"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "ciudad actualizado exitosamente.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ciudad/response"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "ciudad no encontrado."
+          },
+          "500": {
+            "description": "Error del servidor al actualizar ciudad."
+          }
+        }
+      },
+      "delete": {
+        "summary": "Elimina un ciudad por ID.",
+        "tags": [
+          "Ciudad"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "ID del ciudad a eliminar.",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Ciudad eliminado exitosamente."
+          },
+          "404": {
+            "description": "Ciudad no encontrado."
+          },
+          "500": {
+            "description": "Error del servidor al eliminar Ciudad."
+          }
+        }
+      }
+    },
+    "/rest/educacion": {
+      "post": {
+        "summary": "Crea un nuevo registro de educación.",
+        "tags": [
+          "EducacionUsuario"
+        ],
+        "requestBody": {
+          "description": "Datos de educación a crear.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EducacionUsuarioRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Registro de educación creado exitosamente.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EducacionUsuarioResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error del servidor al crear registro de educación."
+          }
+        }
+      }
+    },
+    "/rest/educaciones": {
+      "get": {
+        "summary": "Obtiene un listado de registros de educación.",
+        "tags": [
+          "EducacionUsuario"
+        ],
+        "responses": {
+          "200": {
+            "description": "Listado de registros de educación obtenido exitosamente.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EducacionUsuarioResponse"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error del servidor al obtener el listado de educación."
+          }
+        }
+      }
+    },
+    "/rest/educaciones/{secuencial_user}": {
+      "get": {
+        "summary": "Obtiene un listado de registros de educación por usuario.",
+        "tags": [
+          "EducacionUsuario"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "secuencial_user",
+            "required": true,
+            "description": "Secuencial del usuario.",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Listado de registros de educación obtenido exitosamente.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EducacionUsuarioResponse"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error del servidor al obtener el listado de educación."
+          }
+        }
+      }
+    },
+    "/rest/educacion/{secuencial}": {
+      "get": {
+        "summary": "Obtiene un registro de educación por secuencial.",
+        "tags": [
+          "EducacionUsuario"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "secuencial",
+            "required": true,
+            "description": "Secuencial del registro de educación a buscar.",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Registro de educación encontrado.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EducacionUsuarioResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Registro de educación no encontrado."
+          },
+          "500": {
+            "description": "Error del servidor al obtener registro de educación."
+          }
+        }
+      },
+      "put": {
+        "summary": "Actualiza un registro de educación por secuencial.",
+        "tags": [
+          "EducacionUsuario"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "secuencial",
+            "required": true,
+            "description": "Secuencial del registro de educación a actualizar.",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Nuevos datos del registro de educación.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EducacionUsuarioRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Registro de educación actualizado exitosamente.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EducacionUsuarioResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Registro de educación no encontrado."
+          },
+          "500": {
+            "description": "Error del servidor al actualizar registro de educación."
+          }
+        }
+      },
+      "delete": {
+        "summary": "Elimina un registro de educación por secuencial.",
+        "tags": [
+          "EducacionUsuario"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "secuencial",
+            "required": true,
+            "description": "Secuencial del registro de educación a eliminar.",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Registro de educación eliminado exitosamente."
+          },
+          "404": {
+            "description": "Registro de educación no encontrado."
+          },
+          "500": {
+            "description": "Error del servidor al eliminar registro de educación."
+          }
+        }
+      }
+    },
+    "/rest/experiencia": {
+      "post": {
+        "summary": "Crea un nuevo Experiencia.",
+        "tags": [
+          "Experiencia"
+        ],
+        "requestBody": {
+          "description": "Datos de Experiencia a crear.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Experiencia/request"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Experiencia creado exitosamente.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Experiencia/response"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error del servidor al crear Experiencia."
+          }
+        }
+      }
+    },
+    "/rest/experiencias": {
+      "get": {
+        "summary": "Obtiene un listado de experiencias.",
+        "tags": [
+          "Experiencia"
+        ],
+        "responses": {
+          "200": {
+            "description": "Listado de experiencias obtenido exitosamente.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Experiencia/response"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error del servidor al obtener el listado de experiencias."
+          }
+        }
+      }
+    },
+    "/rest/experiencias/{secuencial_user}": {
+      "get": {
+        "summary": "Obtiene un listado de experiencias por usuario.",
+        "tags": [
+          "Experiencia"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "secuencial_user",
+            "required": true,
+            "description": "secuencial del usuario.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Listado de experiencias obtenido exitosamente.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Experiencia/response"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error del servidor al obtener el listado de experiencias."
+          }
+        }
+      }
+    },
+    "/rest/experiencia/{id}": {
+      "get": {
+        "summary": "Obtiene un experiencias por ID.",
+        "tags": [
+          "Experiencia"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "ID del experiencias a buscar.",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "experiencias encontrado.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/experiencias/response"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Experiencias no encontrado."
+          },
+          "500": {
+            "description": "Error del servidor al obtener experiencias."
+          }
+        }
+      },
+      "put": {
+        "summary": "Actualiza un experiencia por ID.",
+        "tags": [
+          "Experiencia"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "ID del experiencia a actualizar.",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Nuevos datos del experiencia.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/experiencia/request"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Experiencia actualizado exitosamente.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/experiencia/response"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Experiencia no encontrado."
+          },
+          "500": {
+            "description": "Error del servidor al actualizar Experiencia."
+          }
+        }
+      },
+      "delete": {
+        "summary": "Elimina un experiencia por ID.",
+        "tags": [
+          "Experiencia"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "ID del experiencia a eliminar.",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Experiencia eliminado exitosamente."
+          },
+          "404": {
+            "description": "Experiencia no encontrado."
+          },
+          "500": {
+            "description": "Error del servidor al eliminar Experiencia."
+          }
+        }
+      }
+    },
+    "/rest/opcion": {
+      "post": {
+        "summary": "Crea un nuevo opcion.",
+        "tags": [
+          "Opcion"
+        ],
+        "requestBody": {
+          "description": "Datos del opcion a crear.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Opcion/request"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Opcion creado exitosamente.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Opcion/response"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error del servidor al crear opcion."
+          }
+        }
+      }
+    },
+    "/rest/opciones": {
+      "get": {
+        "summary": "Obtiene un listado de opciones.",
+        "tags": [
+          "Opcion"
+        ],
+        "responses": {
+          "200": {
+            "description": "Listado de opciones obtenido exitosamente.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Opcion/response"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error del servidor al obtener el listado de opciones."
+          }
+        }
+      }
+    },
+    "/rest/opcion/{id}": {
+      "get": {
+        "summary": "Obtiene un  opcion por ID.",
+        "tags": [
+          "Opcion"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "ID del opcion a buscar.",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Opcion encontrado.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Opcion/response"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Opcion no encontrado."
+          },
+          "500": {
+            "description": "Error del servidor al obtener pregunta."
+          }
+        }
+      },
+      "put": {
+        "summary": "Actualiza un opcion por ID.",
+        "tags": [
+          "Opcion"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "ID del opcion a actualizar.",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Nuevos datos del opcion.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Opcion/request"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Opcion actualizado exitosamente.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Opcion/response"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Opcion no encontrado."
+          },
+          "500": {
+            "description": "Error del servidor al actualizar opcion."
+          }
+        }
+      },
+      "delete": {
+        "summary": "Elimina un opcion por ID.",
+        "tags": [
+          "Opcion"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "ID del opcion a eliminar.",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Opcion eliminado exitosamente."
+          },
+          "404": {
+            "description": "Opcion no encontrado."
+          },
+          "500": {
+            "description": "Error del servidor al eliminar opcion."
+          }
+        }
+      }
+    },
+    "/rest/pais": {
+      "post": {
+        "summary": "Crea un nuevo pais.",
+        "tags": [
+          "Pais"
+        ],
+        "requestBody": {
+          "description": "Datos de pais a crear.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/pais/request"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Pais creado exitosamente.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/pais/response"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error del servidor al crear Pais."
+          }
+        }
+      }
+    },
+    "/rest/paises": {
+      "get": {
+        "summary": "Obtiene un listado de paises.",
+        "tags": [
+          "Pais"
+        ],
+        "responses": {
+          "200": {
+            "description": "Listado de paises obtenido exitosamente.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/paises/response"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error del servidor al obtener el listado de paises."
+          }
+        }
+      }
+    },
+    "/rest/pais/{id}": {
+      "get": {
+        "summary": "Obtiene un pais por ID.",
+        "tags": [
+          "Pais"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "ID del pais a buscar.",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Pais encontrado.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/pais/response"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Pais no encontrado."
+          },
+          "500": {
+            "description": "Error del servidor al obtener pais."
+          }
+        }
+      },
+      "put": {
+        "summary": "Actualiza un pais por ID.",
+        "tags": [
+          "Pais"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "ID del pais a actualizar.",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Nuevos datos del pais.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/pais/request"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Pais actualizado exitosamente.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/pais/response"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Pais no encontrado."
+          },
+          "500": {
+            "description": "Error del servidor al actualizar Pais."
+          }
+        }
+      },
+      "delete": {
+        "summary": "Elimina un pais por ID.",
+        "tags": [
+          "Pais"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "ID del pais a eliminar.",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Pais eliminado exitosamente."
+          },
+          "404": {
+            "description": "Pais no encontrado."
+          },
+          "500": {
+            "description": "Error del servidor al eliminar Pais."
+          }
+        }
+      }
+    },
+    "/rest/pregunta": {
+      "post": {
+        "summary": "Crea un nuevo pregunta.",
+        "tags": [
+          "Pregunta"
+        ],
+        "requestBody": {
+          "description": "Datos del pregunta a crear.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Pregunta/request"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Pregunta creado exitosamente.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Pregunta/response"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error del servidor al crear pregunta."
+          }
+        }
+      }
+    },
+    "/rest/preguntas": {
+      "get": {
+        "summary": "Obtiene un listado de preguntas.",
+        "tags": [
+          "Pregunta"
+        ],
+        "responses": {
+          "200": {
+            "description": "Listado de preguntas obtenido exitosamente.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Pregunta/response"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error del servidor al obtener el listado de preguntas."
+          }
+        }
+      }
+    },
+    "/rest/pregunta/{id}": {
+      "get": {
+        "summary": "Obtiene un tipo de pregunta por ID.",
+        "tags": [
+          "Pregunta"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "ID del tipo de pregunta a buscar.",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "pregunta encontrado.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Pregunta/response"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "pregunta no encontrado."
+          },
+          "500": {
+            "description": "Error del servidor al obtener pregunta."
+          }
+        }
+      },
+      "put": {
+        "summary": "Actualiza un pregunta por ID.",
+        "tags": [
+          "Pregunta"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "ID del pregunta a actualizar.",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Nuevos datos del pregunta.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Pregunta/request"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "pregunta actualizado exitosamente.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Pregunta/response"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "pregunta no encontrado."
+          },
+          "500": {
+            "description": "Error del servidor al actualizar pregunta."
+          }
+        }
+      },
+      "delete": {
+        "summary": "Elimina un pregunta por ID.",
+        "tags": [
+          "Pregunta"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "ID del pregunta a eliminar.",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Pregunta eliminado exitosamente."
+          },
+          "404": {
+            "description": "Pregunta no encontrado."
+          },
+          "500": {
+            "description": "Error del servidor al eliminar Pregunta."
+          }
+        }
+      }
+    },
+    "/rest/publicidad": {
+      "post": {
+        "summary": "Crea una nueva Publicidad.",
+        "tags": [
+          "Publicidad"
+        ],
+        "requestBody": {
+          "description": "Datos de Publicidad a crear.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Publicidad/request"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Publicidad creada exitosamente.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Publicidad/response"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error del servidor al crear Publicidad."
+          }
+        }
+      }
+    },
+    "/rest/publicidades": {
+      "get": {
+        "summary": "Obtiene las 10 publicidades más recientes.",
+        "tags": [
+          "Publicidad"
+        ],
+        "responses": {
+          "200": {
+            "description": "Listado de las 10 publicidades más recientes obtenido exitosamente.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Publicidad/response"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error del servidor al obtener el listado de publicidades más recientes."
+          }
+        }
+      }
+    },
+    "/rest/publicidad/{id}": {
+      "get": {
+        "summary": "Obtiene una publicidad por ID.",
+        "tags": [
+          "Publicidad"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "ID de la publicidad a buscar.",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Publicidad encontrada.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Publicidad/response"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Publicidad no encontrada."
+          },
+          "500": {
+            "description": "Error del servidor al obtener Publicidad."
+          }
+        }
+      },
+      "put": {
+        "summary": "Actualiza una publicidad por ID.",
+        "tags": [
+          "Publicidad"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "ID de la publicidad a actualizar.",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Nuevos datos de la publicidad.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Publicidad/request"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Publicidad actualizada exitosamente.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Publicidad/response"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Publicidad no encontrada."
+          },
+          "500": {
+            "description": "Error del servidor al actualizar Publicidad."
+          }
+        }
+      },
+      "delete": {
+        "summary": "Elimina una publicidad por ID.",
+        "tags": [
+          "Publicidad"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "ID de la publicidad a eliminar.",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Publicidad eliminada exitosamente."
+          },
+          "404": {
+            "description": "Publicidad no encontrada."
+          },
+          "500": {
+            "description": "Error del servidor al eliminar Publicidad."
+          }
+        }
+      }
+    },
+    "/rest/redSocial": {
+      "post": {
+        "summary": "Crea un nuevo red social.",
+        "tags": [
+          "Red social"
+        ],
+        "requestBody": {
+          "description": "Datos de red social a crear.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/redSocial/request"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Red social creado exitosamente.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/redSocial/response"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error del servidor al crear red social."
+          }
+        }
+      }
+    },
+    "/rest/redessociales": {
+      "get": {
+        "summary": "Obtiene un listado de redes sociales.",
+        "tags": [
+          "Red social"
+        ],
+        "responses": {
+          "200": {
+            "description": "Listado de redes sociales obtenido exitosamente.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/redessociales/response"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error del servidor al obtener el listado de redes sociales ."
+          }
+        }
+      }
+    },
+    "/rest/redsocial/{id}": {
+      "get": {
+        "summary": "Obtiene un red social por ID.",
+        "tags": [
+          "Red social"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "ID del red social a buscar.",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Red social encontrado.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/redsocial/response"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Red social no encontrado."
+          },
+          "500": {
+            "description": "Error del servidor al obtener red social."
+          }
+        }
+      },
+      "put": {
+        "summary": "Actualiza un red social por ID.",
+        "tags": [
+          "Red social"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "ID del red social a actualizar.",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Nuevos datos del red social.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/redsocial/request"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Red social actualizado exitosamente.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/redsocial/response"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Red Social no encontrado."
+          },
+          "500": {
+            "description": "Error del servidor al actualizar red social."
+          }
+        }
+      },
+      "delete": {
+        "summary": "Elimina un red social por ID.",
+        "tags": [
+          "Red social"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "ID del red social a eliminar.",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Red social  eliminado exitosamente."
+          },
+          "404": {
+            "description": "Red social no encontrado."
+          },
+          "500": {
+            "description": "Error del servidor al eliminar red social."
+          }
+        }
+      }
+    },
+    "/rest/tipoUsuarios": {
+      "post": {
+        "summary": "Crea un nuevo tipo de usuario.",
+        "tags": [
+          "Tipo de Usuario"
+        ],
+        "requestBody": {
+          "description": "Datos del tipo de usuario a crear.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TipoUsuario/request"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Tipo de usuario creado exitosamente.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TipoUsuario/response"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error del servidor al crear tipo de usuario."
+          }
+        }
+      },
+      "get": {
+        "summary": "Obtiene un listado de tipo de usuario.",
+        "tags": [
+          "Tipo de Usuario"
+        ],
+        "responses": {
+          "200": {
+            "description": "Listado de tipo de usuario obtenido exitosamente.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TipoUsuario/response"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error del servidor al obtener el listado de usuarios."
+          }
+        }
+      }
+    },
+    "/rest/tipoUsuarios/{id}": {
+      "get": {
+        "summary": "Obtiene un tipo de usuario por ID.",
+        "tags": [
+          "Tipo de Usuario"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "ID del tipo de usuario a buscar.",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Tipo de usuario encontrado.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TipoUsuario/response"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Tipo de usuario no encontrado."
+          },
+          "500": {
+            "description": "Error del servidor al obtener tipo de usuario."
+          }
+        }
+      },
+      "put": {
+        "summary": "Actualiza un tipo de usuario por ID.",
+        "tags": [
+          "Tipo de Usuario"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "ID del tipo de usuario a actualizar.",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Nuevos datos del tipo de usuario.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TipoUsuario/request"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Tipo de usuario actualizado exitosamente.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TipoUsuario/response"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Tipo de usuario no encontrado."
+          },
+          "500": {
+            "description": "Error del servidor al actualizar tipo de usuario."
+          }
+        }
+      },
+      "delete": {
+        "summary": "Elimina un tipo de usuario por ID.",
+        "tags": [
+          "Tipo de Usuario"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "ID del tipo de usuario a eliminar.",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Tipo de usuario eliminado exitosamente."
+          },
+          "404": {
+            "description": "Tipo de usuario no encontrado."
+          },
+          "500": {
+            "description": "Error del servidor al eliminar tipo de usuario."
+          }
+        }
+      }
+    },
+    "/rest/titulo": {
+      "post": {
+        "summary": "Crea un nuevo titulo.",
+        "tags": [
+          "Titulo"
+        ],
+        "requestBody": {
+          "description": "Datos de titulo a crear.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/titulo/request"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Titulo creado exitosamente.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/titulo/response"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error del servidor al crear titulo."
+          }
+        }
+      }
+    },
+    "/rest/titulos": {
+      "get": {
+        "summary": "Obtiene un listado de titulos.",
+        "tags": [
+          "Titulo"
+        ],
+        "responses": {
+          "200": {
+            "description": "Listado de titulos obtenido exitosamente.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/titulos/response"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error del servidor al obtener el listado de titulos."
+          }
+        }
+      }
+    },
+    "/rest/titulo/{id}": {
+      "get": {
+        "summary": "Obtiene un titulo por ID.",
+        "tags": [
+          "Titulo"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "ID del titulo a buscar.",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Titulo encontrado.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/titulo/response"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Titulo no encontrado."
+          },
+          "500": {
+            "description": "Error del servidor al obtener titulo."
+          }
+        }
+      },
+      "put": {
+        "summary": "Actualiza un titulo por ID.",
+        "tags": [
+          "Titulo"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "ID del titulo a actualizar.",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Nuevos datos del titulo.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/titulo/request"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Titulo actualizado exitosamente.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/titulo/response"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Titulo no encontrado."
+          },
+          "500": {
+            "description": "Error del servidor al actualizar titulo."
+          }
+        }
+      },
+      "delete": {
+        "summary": "Elimina un titulo por ID.",
+        "tags": [
+          "Titulo"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "ID del titulo a eliminar.",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Titulo eliminado exitosamente."
+          },
+          "404": {
+            "description": "Titulo no encontrado."
+          },
+          "500": {
+            "description": "Error del servidor al eliminar titulo."
+          }
+        }
+      }
+    },
+    "/rest/userpregunta": {
+      "post": {
+        "summary": "Crea un nuevo user pregunta.",
+        "tags": [
+          "UserPregunta"
+        ],
+        "requestBody": {
+          "description": "Datos de user pregunta a crear.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserPregunta/request"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "User pregunta creado exitosamente.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserPregunta/response"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error del servidor al crear user pregunta."
+          }
+        }
+      }
+    },
+    "/rest/userredsocial": {
+      "post": {
+        "summary": "Crea un nuevo user red social.",
+        "tags": [
+          "User red social"
+        ],
+        "requestBody": {
+          "description": "Datos de user red social a crear.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/userredsocial/request"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "User red socail creado exitosamente.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/userredsocial/response"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error del servidor al crear user red social."
+          }
+        }
+      }
+    },
+    "/rest/userredsociales": {
+      "get": {
+        "summary": "Obtiene un listado de users redes social.",
+        "tags": [
+          "User red social"
+        ],
+        "responses": {
+          "200": {
+            "description": "Listado de users redes sociales obtenido exitosamente.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/userredsociales/response"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error del servidor al obtener el listado de users redes sociales."
+          }
+        }
+      }
+    },
+    "/rest/userredsocial/{id}": {
+      "get": {
+        "summary": "Obtiene un user red social por ID.",
+        "tags": [
+          "User red social"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "ID del user red social a buscar.",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "User red social encontrado.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/userredsocial/response"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "User red social no encontrado."
+          },
+          "500": {
+            "description": "Error del servidor al obtener user red social."
+          }
+        }
+      },
+      "delete": {
+        "summary": "Elimina un user red social por ID.",
+        "tags": [
+          "User red social"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "ID del user red social a eliminar.",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "User red social eliminado exitosamente."
+          },
+          "404": {
+            "description": "User red social no encontrado."
+          },
+          "500": {
+            "description": "Error del servidor al eliminar user red social."
+          }
+        }
+      }
+    },
+    "/rest/usertitulo/{id}": {
+      "put": {
+        "summary": "Actualiza un user titulo por ID.",
+        "tags": [
+          "User titulo"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "ID del user titulo a actualizar.",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Nuevos datos del user titulo.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/usertitulo/request"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "User titulo actualizado exitosamente.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/usertitulo/response"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "User titulo no encontrado."
+          },
+          "500": {
+            "description": "Error del servidor al actualizar user titulo."
+          }
+        }
+      },
+      "get": {
+        "summary": "Obtiene un user titulo por ID.",
+        "tags": [
+          "User titulo"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "ID del user titulo a buscar.",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "User titulo encontrado.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/usertitulo/response"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "User titulo no encontrado."
+          },
+          "500": {
+            "description": "Error del servidor al obtener user titulo."
+          }
+        }
+      },
+      "delete": {
+        "summary": "Elimina un user titulo por ID.",
+        "tags": [
+          "User titulo"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "ID del user titulo a eliminar.",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "User titulo eliminado exitosamente."
+          },
+          "404": {
+            "description": "User titulo no encontrado."
+          },
+          "500": {
+            "description": "Error del servidor al eliminar user titulo."
+          }
+        }
+      }
+    },
+    "/rest/users": {
+      "post": {
+        "summary": "Crea un nuevo usuario.",
+        "tags": [
+          "Usuarios"
+        ],
+        "requestBody": {
+          "description": "Datos del usuario a crear.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/User/request"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Usuario creado exitosamente.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/User/response"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error del servidor al crear usuario."
+          }
+        }
+      }
+    },
+    "/rest/usuarios": {
+      "get": {
+        "summary": "Obtiene un listado de usuarios.",
+        "tags": [
+          "Usuarios"
+        ],
+        "responses": {
+          "200": {
+            "description": "Listado de usuarios obtenido exitosamente.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/User/response"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error del servidor al obtener el listado de usuarios."
+          }
+        }
+      }
+    },
+    "/rest/users/cedula/{cedula}": {
+      "get": {
+        "summary": "Obtiene un usuario por cedula.",
+        "tags": [
+          "Usuarios"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "cedula",
+            "required": true,
+            "description": "username del usuario a buscar.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Usuario encontrado.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/User/response"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Usuario no encontrado."
+          },
+          "500": {
+            "description": "Error del servidor al obtener usuario."
+          }
+        }
+      }
+    },
+    "/rest/users/username/{username}": {
+      "get": {
+        "summary": "Obtiene un usuario por username.",
+        "tags": [
+          "Usuarios"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "username",
+            "required": true,
+            "description": "cedula del usuario a buscar.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Usuario encontrado.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/User/response"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Usuario no encontrado."
+          },
+          "500": {
+            "description": "Error del servidor al obtener usuario."
+          }
+        }
+      }
+    },
+    "/rest/users/{secuencial}": {
+      "put": {
+        "summary": "Actualiza un usuario por secuencial.",
+        "tags": [
+          "Usuarios"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "secuencial",
+            "required": true,
+            "description": "secuencial del usuario a actualizar.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Nuevos datos del usuario.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/User/request"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Usuario actualizado exitosamente.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/User/response"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Usuario no encontrado."
+          },
+          "500": {
+            "description": "Error del servidor al actualizar usuario."
+          }
+        }
+      }
+    },
+    "/rest/users/{id}": {
+      "delete": {
+        "summary": "Elimina un usuario por ID.",
+        "tags": [
+          "Usuarios"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "ID del usuario a eliminar.",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Usuario eliminado exitosamente."
+          },
+          "404": {
+            "description": "Usuario no encontrado."
+          },
+          "500": {
+            "description": "Error del servidor al eliminar usuario."
+          }
+        }
+      }
+    },
+    "/rest/usertitulo": {
+      "post": {
+        "summary": "Crea un nuevo user titulo.",
+        "tags": [
+          "User titulo"
+        ],
+        "requestBody": {
+          "description": "Datos de user titulo a crear.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/usertitulo/request"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "User titulo creado exitosamente.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/usertitulo/response"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error del servidor al crear user titulo."
+          }
+        }
+      }
+    },
+    "/rest/usertitulos": {
+      "get": {
+        "summary": "Obtiene un listado de users titulos.",
+        "tags": [
+          "User titulo"
+        ],
+        "responses": {
+          "200": {
+            "description": "Listado de users titulos obtenido exitosamente.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/usertitulos/response"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error del servidor al obtener el listado de users titulos."
+          }
+        }
+      }
+    }
+  }
+}
